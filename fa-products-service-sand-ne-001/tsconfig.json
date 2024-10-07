@@ -9,8 +9,8 @@
     "esModuleInterop": true
   },
   "include": [
-    "src/**/*"
-, "http-get-product-list", "common"  ],
+    "http-get-product-by-id", "http-get-product-list", "common"  
+  ],
   "exclude": [
     "node_modules"
   ]

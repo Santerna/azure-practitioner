@@ -3,8 +3,7 @@ import { Product } from "../common/types";
 
 const httpGetProductById: AzureFunction = async (context: Context, request: HttpRequest): Promise<void> =>{
     context.log(`Http function processed request for url "${request.url}"`);
-    const productId = request.query.id;
-
+    const productId = request.params.productId;
     const products: Product[] = [
         {
             id: "1",
