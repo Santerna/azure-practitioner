@@ -1,5 +1,45 @@
+resource "azurerm_resource_group" "product_service_rg" {
+  location = "northeurope"
+  name = "fa-products-service-sand-ne-001"
+}
+
+resource "azurerm_storage_account" "product_service_fa" {
+  name = "devsandproductsfane002"
+  location = "northeurope"
+
+  account_replication_type = "LRS"
+  account_tier = "Standard"
+  account_kind = "StorageV2"
+
+  resource_group_name = azurerm_resource_group.product_service_rg.name
+}
+
+resource "azurerm_storage_share" "product_service_fa" {
+  name = "fa-products-service-share"
+  quota = 2
+
+  storage_account_name = azurerm_storage_account.product_service_fa.name
+}
+
+resource "azurerm_service_plan" "product_service_plan" {
+  name = "asp-product-service-sand-ne-001"
+  location = "northeurope"
+
+  os_type = "Windows"
+  sku_name = "Y1"
+
+  resource_group_name = azurerm_resource_group.product_service_rg.name
+}
+resource "azurerm_application_insights" "product_service_fa" {
+  name = "appins-fa-products-service-sand-ne-001"
+  application_type = "web"
+  location = "northeurope"
+
+  resource_group_name = azurerm_resource_group.product_service_rg.name
+}
+
 resource "azurerm_windows_function_app" "product-service-rg" {
-  name     = "rg-products-service-sand-ne-001"
+  name     = "fa-products-service-sand-ne-0011"
   location = "northeurope"
 
   service_plan_id     = azurerm_service_plan.product_service_plan.id
