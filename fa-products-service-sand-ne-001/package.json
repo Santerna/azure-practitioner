@@ -8,10 +8,15 @@
     "watch": "tsc -w",
     "clean": "rimraf dist",
     "prestart": "npm run clean && npm run build",
-    "start": "npm run build && func start"
+    "start": "npm run build && func start",
+    "populate": "ts-node scripts/generate-db-data.ts"
   },
   "dependencies": {
-    "@azure/functions": "^3.0.0"
+    "@azure/app-configuration": "^1.7.0",
+    "@azure/cosmos": "^4.1.1",
+    "@azure/functions": "^3.0.0",
+    "@azure/identity": "^4.5.0",
+    "@faker-js/faker": "^9.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.19.54",

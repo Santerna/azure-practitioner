@@ -5,11 +5,13 @@
     "outDir": "./dist",
     "rootDir": "./",
     "sourceMap": true,
-    "strict": true,
-    "esModuleInterop": true
+    "strict": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
   },
   "include": [
-    "http-get-product-by-id", "http-get-product-list", "common"  
+    "http-get-product-by-id", "http-get-product-list", "common", "scripts" 
   ],
   "exclude": [
     "node_modules"
