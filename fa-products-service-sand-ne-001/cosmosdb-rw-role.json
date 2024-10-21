@@ -1,0 +1,13 @@
+{
+    "Name": "Cosmos DB Read Write Role",
+  "IsCustom": true,
+  "Description": "Allows for reading and writing documents in Cosmos DB",
+  "Actions": [
+    "Microsoft.DocumentDB/databaseAccounts/read",
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/read",
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/read",
+    "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/items/*"
+  ],
+    "NotActions": [],
+    "AssignableScopes": ["/subscriptions/262f3df4-2c54-4332-bd55-9b7690aa2d74/resourceGroups/fa-products-service-sand-ne-001/providers/Microsoft.DocumentDB/databaseAccounts/cosmosdb-products-service-sand-ne"]
+  }
