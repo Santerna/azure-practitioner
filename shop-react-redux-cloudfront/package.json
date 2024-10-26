@@ -23,8 +23,8 @@
     "cloudfront:update:build:deploy": "npm run cloudfront:setup && npm run cloudfront:build:deploy",
     "cloudfront:update:build:deploy:nc": "npm run cloudfront:setup && npm run cloudfront:build:deploy:nc",
     "serverless:remove": "sls remove",
-    "terraform:init": "cd terraform && terraform init",
-    "terraform:apply": "cd terraform && terraform apply -auto-approve",
+    "terraform:init": "cd ../terraform && terraform init",
+    "terraform:apply": "cd ../terraform && terraform apply -auto-approve",
     "deploy": "npm run build && npm run terraform:init && npm run terraform:apply"
   },
   "dependencies": {

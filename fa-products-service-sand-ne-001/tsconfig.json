@@ -10,10 +10,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true
   },
-  "include": [
-    "http-get-product-by-id", "http-get-product-list", "common", "scripts" 
-  ],
   "exclude": [
-    "node_modules"
+    "node_modules", "scripts"
   ]
 }
