@@ -1,12 +1,12 @@
 import { AzureFunction, HttpRequest, Context } from "@azure/functions";
-import { Product } from "../common/types";
+import { ProductWithStock } from "../common/types";
 import { getProductsList } from "../dal/productService";
 
 const httpGetProductList: AzureFunction = async (context: Context, request: HttpRequest): Promise<void> =>{
     context.log(`Http function processed request for url "${request.url}"`);
 
     try {
-        const products: Product[] = await getProductsList();
+        const products: ProductWithStock[] = await getProductsList();
         context.res = {
             status: 200,
             body: products

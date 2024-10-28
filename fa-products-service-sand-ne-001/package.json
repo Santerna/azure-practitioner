@@ -22,7 +22,8 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.19.54",
+    "@types/joi": "^17.2.3",
+    "@types/node": "^18.19.59",
     "@types/uuid": "^10.0.0",
     "azure-functions-core-tools": "^4.x",
     "rimraf": "^5.0.0",
