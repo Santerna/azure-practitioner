@@ -3,4 +3,13 @@ export type Product ={
     title: string;
     description: string;
     price: string;
-}
+};
+
+export type Stock = {
+    product_id: string;
+    count: number;
+};
+
+export type ProductWithStock = Product & {
+    count: number;
+};
