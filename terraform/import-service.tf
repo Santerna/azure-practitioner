@@ -20,6 +20,12 @@ resource "azurerm_storage_container" "uploaded" {
   container_access_type = "blob"
 }
 
+resource "azurerm_storage_container" "parsed" {
+  name = "parsed"
+  storage_account_name = azurerm_storage_account.import_service_fa.name
+  container_access_type = "blob"
+}
+
 resource "azurerm_storage_share" "import_service_fa" {
   name = "fa-import-service-share"
   quota = 2
